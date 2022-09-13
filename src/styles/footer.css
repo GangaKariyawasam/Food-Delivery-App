@@ -1,0 +1,78 @@
+.footer{
+    padding: 50px 0px;
+    background-color: blanchedalmond;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.footer_logo img{
+ width: calc(100%-80%);
+ margin-bottom: 5px;
+}
+
+.footer_logo h4{
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+.footer_logo p{
+    font-size: 0.9rem;
+    color: darkgrey;
+    line-height: 28px;
+}
+
+.delivery_time-item{
+    background: transparent !important;
+}
+
+.delivery_time-item span{
+    font-weight: 600;
+     font-size: 1rem;
+     color: black; 
+}
+
+.delivery_time-item p{
+    color: gray;
+}
+
+.footer_title{
+    font-size: 1.1rem;
+    color: black;
+    font-weight: 600;
+}
+
+.newsLetter{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer; 
+}
+
+.newsLetter input{
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.newsLetter input:focus{
+    outline: none;
+}
+
+.newsLetter input::placeholder{
+    color: black;
+}
+
+.social_links span i{
+    padding: 5px;
+    background: black;
+    color: aliceblue;
+    border-radius: 50%;
+}
+
+.copyright_text{
+    font-size: .8rem;
+    color: dimgray;
+}
