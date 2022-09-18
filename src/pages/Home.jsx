@@ -47,7 +47,7 @@ const Home = () => {
     const [allProducts, setAllProducts] = useState(products);
 
     useEffect(()=>{
-        if(category === 'All'){
+        if(category === 'ALL'){
             setAllProducts(products)
         }
 
