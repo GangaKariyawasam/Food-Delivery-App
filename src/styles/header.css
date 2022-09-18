@@ -8,7 +8,8 @@
 }
 
 .logo img{
-    width: calc(100%-60%);
+    width: 50%;
+    width: calc(100%-10%);
     object-fit: contain;
 }
 
@@ -16,8 +17,8 @@
     font-weight: 600px;
     font-size: 1rem;
     color: black;
-    margin-top: -10px;
-    margin-bottom: 0;
+    /* margin-top: 20px; */
+    padding-top: 5px;
 }
 
 .menu a{

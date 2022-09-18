@@ -3,6 +3,7 @@ import '../../styles/header.css'
 
 import { Container } from 'reactstrap';
 import { NavLink,Link } from 'react-router-dom';
+import logo from '../../assets/images/res-logo.png'
 
 const nav__links = [
 {
@@ -25,7 +26,6 @@ const nav__links = [
 
 
 export const Header = () => {
-const logo = 'https://dribbble.com/shots/14320628-Food-Shop-logo-design'
 const menuRef = useRef(null);
 const toggleMenu = ()=> menuRef.current.classList.toggle('show_menu')
 
@@ -34,7 +34,7 @@ const toggleMenu = ()=> menuRef.current.classList.toggle('show_menu')
             <Container>
                 <div className="nav_wrapper d-flex align-items-center justify-content-between">
                     <div className="logo">
-                        <img src='https://dribbble.com/shots/14320628-Food-Shop-logo-design' alt="logo" />
+                        <img src={logo} alt="logo" />
                         <h5>Testy food</h5>
                     </div>
 
