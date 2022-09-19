@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import { Container,Row,Col } from 'reactstrap';
+import { Container,Row,Col,ListGroup,ListGroupItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 import '../styles/hero-section.css';
@@ -20,6 +20,9 @@ import featureImg3 from '../assets/images/service-03.png';
 import foodCategoryImg1 from '../assets/images/hamburger.png';
 import foodCategoryImg2 from '../assets/images/pizza.png';
 import foodCategoryImg3 from '../assets/images/bread.png';
+
+import whyImg from '../assets/images/location.png';
+import networkImg from '../assets/images/network.png';
 
 
 const featureData = [
@@ -45,6 +48,7 @@ const Home = () => {
 
     const [category, setCategory] = useState('ALL');
     const [allProducts, setAllProducts] = useState(products);
+    const [hotPizza,setHotPizza] = useState([]);
 
     useEffect(()=>{
         if(category === 'ALL'){
@@ -66,6 +70,12 @@ const Home = () => {
             setAllProducts(filteredProducts)
         }
     },[category])
+
+    useEffect(()=>{
+        const filteredProduct = products.filter(item=>item.category === 'Pizza')
+        const slicePizza = filteredProduct.slice(0,4)
+        setHotPizza(slicePizza)
+    },[])
 
     return (
         <div>
@@ -157,6 +167,76 @@ const Home = () => {
                 }
             </Row>
            </Container>
+         </section>
+         <section>
+            <Container>
+                <Row>
+                    <Col lg='6' md='6'>
+                        <img src={whyImg} alt="why-tasty-treat" className='w-100' />
+                    </Col>
+                    <Col lg='6' md='6'>
+                        <div className="why_tasty-treat">
+                            <h2 className='tasty_treat-title mb-4'>Why <span>Tasty Treat ?</span></h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas earum, omnis quidem nam minima repellendus, 
+                                dolorem recusandae vitae iste accusantium, ab ducimus voluptatibus! Error omnis, beatae esse vero eaque id.</p>
+                                <ListGroup className='mt-3'>
+                                    <ListGroupItem className='border-0 ps-0'>
+                                        <p className='choose_us-title d-flex align-items-center gap-2'><i className="ri-checkbox-circle-line"></i>
+                                            Fresh and tasty food</p>
+                                        <p className='tasty_treat-des'>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                            Perspiciatis in id quod quasi veniam tempora rem illum dolores! Natus neque optio repellendus reprehenderit officia. 
+                                            Quo consequatur molestiae officiis fugit odio?</p>
+                                    </ListGroupItem>
+                                    <ListGroupItem className='border-0 ps-0 '>
+                                        <p className='choose_us-title d-flex align-items-center gap-2'><i className="ri-checkbox-circle-line"></i>
+                                            Quality support </p>
+                                        <p className='tasty_treat-des'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi tempore soluta aut dolores placeat tempora. Esse, 
+                                            doloremque iste fugiat illum, 
+                                            error optio repellendus, nulla eum nisi vero nihil laborum provident!</p>
+                                    </ListGroupItem>
+                                    <ListGroupItem className='border-0 ps-0 '>
+                                        <p className='choose_us-title d-flex align-items-center gap-2'><i className="ri-checkbox-circle-line"></i>
+                                            Order from any location</p>
+                                        <p className='tasty_treat-des'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, sed!.</p>
+                                    </ListGroupItem>
+                                </ListGroup>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+         </section>
+         <section className='pt-0'>
+            <Container>
+                <Row>
+                    <Col lg='12' className='text-center mb-4'>
+                     <h2>Hot Pizza</h2>
+                    </Col>
+                    {
+                        hotPizza.map(item=>(
+                            <Col lg='3' md='4' key={item.id}>
+                                <ProductCard item={item}/>
+                            </Col>
+                        ))
+                    }
+                </Row>
+            </Container>
+         </section>
+         <section>
+            <Container>
+                <Row>
+                <Col lg='6' md='6'>
+                       <div className='testimonial mb-3'> 
+                        <h5 className='testimonial_subtitle'>Testimonial</h5>
+                        </div>
+                       <h2 className='testimonial_title'>What our <span>customers</span> are saying</h2>
+                       <p className='testimonial_des'>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                       Voluptas dolore dolor nostrum dolores sunt iure fuga aliquam ipsam nam! Alias?</p>
+                    </Col>
+                    <Col lg='6' md='6'>
+                        <img src={networkImg} alt="testimonial_img" className='w-100'/>
+                    </Col>
+                </Row>
+            </Container>
          </section>
 
         </div>

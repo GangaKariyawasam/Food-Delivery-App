@@ -40,3 +40,24 @@
     border-radius: 5px;
     color: green !important;
 }
+
+.tasty_treat-title span{
+    color: cornflowerblue;
+}
+
+.tasty_treat-des{
+    color: rgb(151, 135, 135);
+    line-height: 25px;
+}
+
+.choose_us-title{
+    font-weight: 1000;
+}
+
+.testimonial_subtitle{
+    color: cornflowerblue;
+}
+
+.testimonial_title span{
+    color: cornflowerblue;
+}
