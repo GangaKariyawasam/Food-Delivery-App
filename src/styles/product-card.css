@@ -42,3 +42,19 @@
 .addToCart_btn:hover{
     background: rgb(108, 108, 207);
 }
+
+@media screen and (max-width: 768px) {
+
+    .product_item{
+        padding: 20px;
+    }
+
+    .product_content h5 a{
+        font-size: 0.9rem;
+    }
+
+    .addToCart_btn{
+        padding: 5px 15px;
+        font-size: 0.8rem;
+    }
+}

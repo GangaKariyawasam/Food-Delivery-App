@@ -3,6 +3,8 @@ import '../../styles/footer.css'
 import { Container,Row,Col,ListGroup,ListGroupItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
+import logo from '../../assets/images/res-logo.png';
+
 export const Footer = () => {
     return (
         <footer className="footer">
@@ -10,7 +12,7 @@ export const Footer = () => {
                 <Row>
                     <Col lg='3' md='4' sm='6'>
                     <div className="footer_logo text-start">
-                        <img src='https://dribbble.com/shots/14320628-Food-Shop-logo-design' alt="logo" />
+                        <img src={logo} alt="logo" />
                         <h5>Testy food</h5>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             Consectetur temporibus fuga, perspiciatis molestiae, distinctio culpa unde voluptas

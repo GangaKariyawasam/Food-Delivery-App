@@ -9,6 +9,7 @@ import '../styles/home.css';
 import { Helmet } from '../components/Helmet/Helmet.js';
 import { Category } from '../components/UI/category/Category.jsx';
 import { ProductCard } from '../components/UI/product-card/ProductCard.jsx';
+import {TestomonialSlider} from '../components/UI/slider/TestomonialSlider.jsx'
 
 import products from '../assets/fake-data/products.js';
 
@@ -86,7 +87,7 @@ const Home = () => {
             <Col lg='6' md='6'>
                 <div className="hero_content">
                 <h5 className='mb-3'>Easy way to make an order</h5>
-                <h1 className='mb-4 hero-title'><span>HUNGRY?</span>just wait <br/> food at<span> your door</span></h1>
+                <h1 className='hero-title mb-4 '><span>HUNGRY?</span>just wait <br/> food at<span> your door</span></h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat est corporis laudantium saepe sit atque ullam tempora fugit magni!</p>
 
                 <div className="hero_btns d-flex align-items-center gap-5 mt-4">
@@ -132,7 +133,7 @@ const Home = () => {
                     </Col>
                     {
                         featureData.map((item,index)=>(
-                        <Col lg='4' md='4' key={index} className='mt-5 mb-3'>
+                        <Col lg='4' md='6' sm='6' key={index} className='mt-5 mb-3'>
                             <div className="feature_item text-center px-3 py-5">
                                 <img src={item.imgUrl} alt="feature-img" className='w-25' />
                                 <h5 className='fw-bold mb-4'>{item.title}</h5>
@@ -160,7 +161,7 @@ const Home = () => {
                 </Col>
                 {allProducts.map(item =>(
                     // console.log(item)
-                      <Col lg='3' md='4' key={item.id} className='mt-4'>
+                      <Col lg='3' md='4' sm='6' xs='6' key={item.id} className='mt-4'>
                       <ProductCard item={item}/>
                   </Col>
                 ))
@@ -168,7 +169,7 @@ const Home = () => {
             </Row>
            </Container>
          </section>
-         <section>
+         <section className='why_choose-us'>
             <Container>
                 <Row>
                     <Col lg='6' md='6'>
@@ -176,28 +177,28 @@ const Home = () => {
                     </Col>
                     <Col lg='6' md='6'>
                         <div className="why_tasty-treat">
-                            <h2 className='tasty_treat-title mb-4'>Why <span>Tasty Treat ?</span></h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas earum, omnis quidem nam minima repellendus, 
+                            <h2 className='tasty_treat-title mb-3'>Why <span>Tasty Treat ?</span></h2>
+                            <p className='tasty_treat-des'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas earum, omnis quidem nam minima repellendus, 
                                 dolorem recusandae vitae iste accusantium, ab ducimus voluptatibus! Error omnis, beatae esse vero eaque id.</p>
                                 <ListGroup className='mt-3'>
                                     <ListGroupItem className='border-0 ps-0'>
                                         <p className='choose_us-title d-flex align-items-center gap-2'><i className="ri-checkbox-circle-line"></i>
                                             Fresh and tasty food</p>
-                                        <p className='tasty_treat-des'>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                        <p className='choose_us-des'>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                             Perspiciatis in id quod quasi veniam tempora rem illum dolores! Natus neque optio repellendus reprehenderit officia. 
                                             Quo consequatur molestiae officiis fugit odio?</p>
                                     </ListGroupItem>
                                     <ListGroupItem className='border-0 ps-0 '>
                                         <p className='choose_us-title d-flex align-items-center gap-2'><i className="ri-checkbox-circle-line"></i>
                                             Quality support </p>
-                                        <p className='tasty_treat-des'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi tempore soluta aut dolores placeat tempora. Esse, 
+                                        <p className='choose_us-des'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi tempore soluta aut dolores placeat tempora. Esse, 
                                             doloremque iste fugiat illum, 
                                             error optio repellendus, nulla eum nisi vero nihil laborum provident!</p>
                                     </ListGroupItem>
                                     <ListGroupItem className='border-0 ps-0 '>
                                         <p className='choose_us-title d-flex align-items-center gap-2'><i className="ri-checkbox-circle-line"></i>
                                             Order from any location</p>
-                                        <p className='tasty_treat-des'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, sed!.</p>
+                                        <p className='choose_us-des'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, sed!.</p>
                                     </ListGroupItem>
                                 </ListGroup>
                         </div>
@@ -230,7 +231,9 @@ const Home = () => {
                         </div>
                        <h2 className='testimonial_title'>What our <span>customers</span> are saying</h2>
                        <p className='testimonial_des'>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                       Voluptas dolore dolor nostrum dolores sunt iure fuga aliquam ipsam nam! Alias?</p>
+                       Voluptas dolore dolor nostrum dolores sunt iure fuga aliquam ipsam nam! Alias?
+                       </p>
+                       <TestomonialSlider/>
                     </Col>
                     <Col lg='6' md='6'>
                         <img src={networkImg} alt="testimonial_img" className='w-100'/>

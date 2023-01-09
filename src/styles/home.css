@@ -61,3 +61,115 @@
 .testimonial_title span{
     color: cornflowerblue;
 }
+
+@media screen and (max-width: 768px) {
+    .hero_content h5{
+        font-size: 1rem;
+       text-align: center;
+    }
+
+    .hero_content p{
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .hero-title{
+        font-size: 1.5rem;
+        line-height: 40px;
+        text-align: center;
+    }
+
+    .hero_btns{
+        font-size: 0.9rem;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    .hero_service p{
+        font-size: 0.8rem !important;
+    }
+
+    .feature_item h5{
+        font-size: 0.9rem;
+    }
+
+    .feature_item p{
+        font-size: 0.8rem;
+        margin-bottom: -30px;
+    }
+
+    .feature_subtitle{
+        font-size: 1rem;
+    }
+
+    .feature_text{
+        font-size: 0.8rem;
+        margin-bottom: 0;
+    }
+
+    .food_category button{
+        font-size: 0.8rem;
+        padding: 5px 15px;
+    }
+
+    .tasty_treat-title{
+        font-size: 1rem;
+    }
+
+    .tasty_treat-des{
+        font-size: 0.9rem;
+        padding-bottom: 0;
+    }
+
+    .choose_us-title{
+        font-size: 0.9rem;
+    }
+
+    .choose_us-des{
+        font-size: 0.9rem;
+    }
+
+    .why_choose-us{
+        padding-top: 0;
+    }
+
+    .testimonial_subtitle{
+        font-size: 1rem;
+    }
+
+    .testimonial_title{
+        font-size: 1.1rem;
+    }
+
+    .testimonial_des{
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .hero_content h5{
+        font-size: 1rem;
+       text-align: center;
+    }
+
+    .hero_content p{
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .hero-title{
+        font-size: 1.5rem;
+        line-height: 40px;
+        text-align: center;
+    }
+
+    .hero_btns{
+        font-size: 0.9rem;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    .hero_service{
+        justify-content: center;
+    }
+}

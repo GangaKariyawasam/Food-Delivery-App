@@ -6,6 +6,7 @@
 }
 
 .footer_logo img{
+    width: 20%;
  width: calc(100%-80%);
  margin-bottom: 5px;
 }
@@ -75,4 +76,65 @@
 .copyright_text{
     font-size: .8rem;
     color: dimgray;
+}
+
+@media screen and (max-width: 992px) {
+
+    .newsLetter input{
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+
+    .newsLetter span{
+        padding: 0;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .footer_title{
+        font-size: 0.8rem;
+    }
+
+    .delivery_time-item span{
+        font-size: 0.8rem
+    }
+
+    .delivery_time-item p{
+        font-size: 0.7rem;
+        margin-bottom: 0;
+    }
+
+    .newsLetter input{
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+
+    .newsLetter span{
+        padding: 0;
+    }
+
+    .copyright_text{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .footer{
+        padding-left: 20px;
+        /* margin-right: ; */
+    }
+
+    .social_links{
+        justify-content: center;
+    }
+
+    .social_links p{
+        font-size: 0.8rem;
+    }
+
+    .social_links span{
+        padding: 2px;
+    }
 }

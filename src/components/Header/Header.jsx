@@ -1,8 +1,10 @@
-import React, {useRef} from 'react';
+import React, {useRef,useEffect} from 'react';
 import '../../styles/header.css'
 
 import { Container } from 'reactstrap';
 import { NavLink,Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+
 import logo from '../../assets/images/res-logo.png'
 
 const nav__links = [
@@ -26,11 +28,32 @@ const nav__links = [
 
 
 export const Header = () => {
+                                
 const menuRef = useRef(null);
+const headRef = useRef(null);
+const totalQuantity = useSelector(state => state.cart.totalQuantity)
+
 const toggleMenu = ()=> menuRef.current.classList.toggle('show_menu')
 
+useEffect(()=>{
+    window.addEventListener('scroll',()=>{
+        if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
+            headRef.current.classList.add('header_shrink','logo_shrink')
+        }
+        else{
+            headRef.current.classList.remove('header_shrink','logo_shrink')
+        }
+    })
+
+    return ()=> window.removeEventListener('scroll',()=>{
+        headRef.current.classList.remove('header_shrink','logo_shrink')
+    }
+    )
+    
+},[])
+
     return (
-        <header className="header">
+        <header className="header" ref={headRef}>
             <Container>
                 <div className="nav_wrapper d-flex align-items-center justify-content-between">
                     <div className="logo">
@@ -38,7 +61,7 @@ const toggleMenu = ()=> menuRef.current.classList.toggle('show_menu')
                         <h5>Testy food</h5>
                     </div>
 
-                    <div className="navigation" ref={menuRef}  onClick={toggleMenu}>
+                    <div className="navigation" ref={menuRef} onClick={toggleMenu}>
                         <div className="menu d-flex align-items-center gap-5">
                         {
                           nav__links.map((item,index)=>(
@@ -55,7 +78,7 @@ const toggleMenu = ()=> menuRef.current.classList.toggle('show_menu')
                     <div className="nav_right d-flex align-items-center gap-3">
                         <span className="cart_icon">
                             <i className="ri-shopping-basket-line"></i>
-                            <span className="cart_badge">2</span>
+                            <span className="cart_badge">{totalQuantity}</span>
                         </span>
 
                         <span className="user">
